@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Smart finds for everyday living. Practical, beautiful finds for home, travel, events, and every season.">
     <title>The Organized Nest | Smart Finds for Everyday Living</title>
+    <link rel="canonical" href="https://the-organized-nest.netlify.app/">
+    
+    <!-- Open Graph / Pinterest -->
+    <meta property="og:title" content="The Organized Nest | Smart Finds for Everyday Living">
+    <meta property="og:description" content="Practical, beautiful finds for home, travel, events, and every season.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+
+    <!-- Analytics Placeholders (Uncomment and add your IDs when ready) -->
+    <!-- Google Analytics (GA4)
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+    
+    <!-- Pinterest Tag
+    <script>
+      !function(e){if(!window.pintrk){window.pintrk = function () {
+      window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+      n=window.pintrk;n.queue=[];n.version="3.0";var t=document.createElement("script");
+      t.async=!0;t.src=e;var r=document.getElementsByTagName("script")[0];
+      r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+      pintrk('load', 'YOUR_PINTEREST_TAG_ID');
+      pintrk('page');
+    </script> -->
+
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
@@ -47,7 +76,7 @@
         <section class="featured-guide container">
             <div class="section-header"><h2>Featured Guide</h2></div>
             <article class="featured-card">
-                <div class="featured-image"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80" alt="Concert essentials layout"></div>
+                <div class="featured-image"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80" alt="Concert essentials layout" loading="lazy"></div>
                 <div class="featured-text">
                     <span class="category-tag">Concerts & Events</span>
                     <h3>Concert Essentials You'll Wish You Packed</h3>
@@ -61,11 +90,11 @@
             <div class="section-header"><h2>Browse by Category</h2></div>
             <div class="category-grid">
                 <a href="#" class="category-card"><span>🏠 Home</span></a>
-                <a href="#" class="category-card"><span> Kitchen</span></a>
-                <a href="travel.html" class="category-card"><span>️ Travel</span></a>
-                <a href="#" class="category-card"><span>🎵 Concerts & Events</span></a>
-                <a href="#" class="category-card"><span> Seasonal</span></a>
-                <a href="#" class="category-card"><span>🎁 Gift Guides</span></a>
+                <a href="#" class="category-card"><span>🍳 Kitchen</span></a>
+                <a href="travel.html" class="category-card"><span>✈️ Travel</span></a>
+                <a href="#" class="category-card"><span> Concerts & Events</span></a>
+                <a href="#" class="category-card"><span>🍂 Seasonal</span></a>
+                <a href="#" class="category-card"><span> Gift Guides</span></a>
             </div>
         </section>
 
@@ -73,7 +102,7 @@
             <div class="section-header"><h2>Latest Articles</h2></div>
             <div class="article-grid">
                 <article class="article-card">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Cozy fall home decor">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Cozy fall home decor" loading="lazy">
                     <div class="article-content">
                         <span class="category-tag">Seasonal</span>
                         <h3>Cozy Fall Home Finds Under $50</h3>
@@ -82,7 +111,7 @@
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80" alt="Organized kitchen pantry">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80" alt="Organized kitchen pantry" loading="lazy">
                     <div class="article-content">
                         <span class="category-tag">Kitchen</span>
                         <h3>10 Pantry Organization Hacks That Actually Work</h3>
@@ -91,7 +120,7 @@
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Travel packing cubes">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Travel packing cubes" loading="lazy">
                     <div class="article-content">
                         <span class="category-tag">Travel</span>
                         <h3>The Ultimate Carry-On Packing List</h3>
@@ -100,7 +129,7 @@
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=600&q=80" alt="Concert crowd">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=600&q=80" alt="Concert crowd" loading="lazy">
                     <div class="article-content">
                         <span class="category-tag">Concerts & Events</span>
                         <h3>Concert Survival Kit: 10 Essentials</h3>

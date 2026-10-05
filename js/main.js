@@ -47,14 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput && searchResultsContainer && typeof siteArticles !== 'undefined') {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
-            searchResultsContainer.innerHTML = ''; // Clear previous results
+            searchResultsContainer.innerHTML = ''; 
 
             if (query.length < 2) {
                 searchResultsContainer.style.display = 'none';
                 return;
             }
 
-            // Filter articles
             const filteredArticles = siteArticles.filter(article => 
                 article.title.toLowerCase().includes(query) || 
                 article.category.toLowerCase().includes(query) ||
@@ -82,13 +81,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Hide search results when clicking outside
         document.addEventListener('click', (event) => {
             if (!event.target.closest('.header-search')) {
                 searchResultsContainer.style.display = 'none';
             }
         });
     }
+
+    // 4. Amazon Affiliate Tag Injector
+    // CHANGE THIS TO YOUR REAL AMAZON ASSOCIATE TAG (e.g., "yourtag-20")
+    const AMAZON_TAG = "YOUR_TAG-20"; 
+    
+    document.querySelectorAll('.amazon-affiliate-link').forEach(link => {
+        let href = link.getAttribute('href');
+        if (href && href !== '#' && !href.includes('amazon.com')) {
+            // For now, we just prepare the structure. 
+            // When you add real Amazon links, this will append the tag.
+        } else if (href && href.includes('amazon.com')) {
+            if (href.includes('?')) {
+                href += `&tag=${AMAZON_TAG}`;
+            } else {
+                href += `?tag=${AMAZON_TAG}`;
+            }
+            link.setAttribute('href', href);
+        }
+    });
 
     console.log("The Organized Nest: JavaScript loaded successfully.");
 });
