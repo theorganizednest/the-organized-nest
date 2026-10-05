@@ -89,17 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Amazon Affiliate Tag Injector
-    // CHANGE THIS TO YOUR REAL AMAZON ASSOCIATE TAG (e.g., "yourtag-20")
-    const AMAZON_TAG = "YOUR_TAG-20"; 
+    const AMAZON_TAG = "organizedne02-20"; 
     
     document.querySelectorAll('.amazon-affiliate-link').forEach(link => {
         let href = link.getAttribute('href');
-        if (href && href !== '#' && !href.includes('amazon.com')) {
-            // For now, we just prepare the structure. 
-            // When you add real Amazon links, this will append the tag.
-        } else if (href && href.includes('amazon.com')) {
+        // Check if it's an Amazon link and doesn't already have a tag
+        if (href && href !== '#' && (href.includes('amazon.com') || href.includes('amzn.to') || href.includes('link.amazon'))) {
             if (href.includes('?')) {
-                href += `&tag=${AMAZON_TAG}`;
+                if (!href.includes('tag=')) {
+                    href += `&tag=${AMAZON_TAG}`;
+                }
             } else {
                 href += `?tag=${AMAZON_TAG}`;
             }
