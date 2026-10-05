@@ -1,22 +1,19 @@
 // Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Mobile Menu Toggle Functionality
+    // 1. Mobile Menu Toggle Functionality
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
 
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', () => {
-            // Toggle the 'active' class on the nav
             mainNav.classList.toggle('active');
-            
-            // Update aria-expanded for accessibility
             const isExpanded = mainNav.classList.contains('active');
             menuToggle.setAttribute('aria-expanded', isExpanded);
         });
     }
 
-    // Optional: Close mobile menu when clicking outside of it
+    // Close mobile menu when clicking outside of it
     document.addEventListener('click', (event) => {
         if (mainNav && mainNav.classList.contains('active')) {
             if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
@@ -25,6 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // 2. Back to Top Button Functionality
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    if (backToTopBtn) {
+        // Show button when scrolling down 300px
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Smooth scroll to top when clicked
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
     console.log("The Organized Nest: JavaScript loaded successfully.");
 });
