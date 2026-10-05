@@ -1,6 +1,5 @@
 /* =========================================
-   THE ORGANIZED NEST - SPRINT 10.2 CSS
-   (TOC anchor offset fix + bullet removal)
+   THE ORGANIZED NEST - SPRINT 12 CSS
    ========================================= */
 
 /* 1. CSS VARIABLES & RESET */
@@ -28,8 +27,7 @@ a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 ul { list-style: none; }
 .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
 
-/* ANCHOR OFFSET FIX (Sprint 10.2): Para hindi matakipan ng sticky header
-   ang mga section titles kapag nag-click sa Table of Contents o iba pang anchors. */
+/* ANCHOR OFFSET FIX (Sprint 10.2): Para hindi matakipan ng sticky header ang mga section titles kapag nag-click sa Table of Contents o iba pang anchors. */
 [id] { scroll-margin-top: 100px; }
 
 /* 2. TYPOGRAPHY & BUTTONS */
@@ -231,4 +229,73 @@ section { padding: 4rem 0; }
 .pin-it-btn:hover {
     background-color: #C4001D;
     transform: translateY(-2px);
+}
+
+/* =========================================
+   SPRINT 12: AMAZON FINDS HUB STYLES
+   ========================================= */
+
+.finds-filter-bar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--color-sage);
+    color: var(--color-text);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--color-sage);
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+}
+
+.finds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Override standard product card layout for the grid view */
+.finds-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.finds-card .product-image img {
+    height: 200px; /* Fixed height for uniformity in grid */
+    object-fit: contain;
+    background: #fff;
+}
+
+.finds-card .product-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.finds-card .product-info p {
+    flex-grow: 1;
+}
+
+.finds-card .btn {
+    width: 100%;
+    margin-top: auto;
 }
