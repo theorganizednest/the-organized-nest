@@ -1,10 +1,12 @@
 /* =========================================
    THE ORGANIZED NEST - PRODUCT REGISTRY
    =========================================
-   RULE: filename stem == registry key == data-product in HTML.
-   Example: disk file "label-maker-01.jpg"  ->  key "label-maker-01"
-            ->  <div class="product-card" data-product="label-maker-01">
-   Available false = itinatago ang card sa BUONG site.
+   RULE (SLUG CONTRACT): filename stem on disk == registry key == data-product in HTML.
+   Example: disk "throw-blanket-01.jpg" -> key "throw-blanket-01"
+            -> <div class="product-card" data-product="throw-blanket-01">
+   available:false = itinatago ang card sa BUONG site.
+   NEVER silently rename a slug. Content (name/desc/photo) follows the real product;
+   the slug is an invisible handle and stays frozen once set.
 */
 
 const PRODUCT_REGISTRY = {
@@ -156,6 +158,40 @@ const PRODUCT_REGISTRY = {
         image: "/images/products/can-organizer-01.jpg",
         imageAlt: "3-tier stackable metal can organizer rack",
         link: "https://link.amazon/B00ooP5yc",
+        available: true
+    },
+
+    // --- SEASONAL / FALL (4 Items) ---
+    "throw-blanket-01": {
+        name: "BEDELITE Ribbed Fleece Throw Blanket (50 x 60 in)",
+        description: "A 50 x 60 inch ribbed fleece throw in a soft beige tone, made from plush 300 GSM microfiber polyester with a raised 3D stripe texture. Lightweight and machine washable, it resists shrinking, fading, and shedding—drapes nicely over a couch, bed, or accent chair.",
+        image: "/images/products/throw-blanket-01.jpg",
+        imageAlt: "Beige ribbed fleece throw blanket draped on a couch",
+        link: "https://link.amazon/B01BLu4CM",
+        available: true
+    },
+    "scented-candle-01": {
+        name: "4-Piece Fall Scented Soy Candle Set (7 oz each)",
+        description: "A set of four 7 oz soy wax candles in autumn scents—Vanilla Cupcake, Spiced Pumpkin, Cinnamon Clove, and Caramel Apple—blended with natural essential oils for a clean, even burn of up to 50 hours each. They arrive in season-themed gift packaging.",
+        image: "/images/products/scented-candle-01.jpg",
+        imageAlt: "Set of four fall-scented soy wax candles",
+        link: "https://link.amazon/B07YlQysw",
+        available: true
+    },
+    "coffee-mug-01": {
+        name: "Gencywe 16 oz Ceramic Coffee Mug Set of 4",
+        description: "A set of four 16 oz porcelain mugs in assorted colors, made from lead-free, non-toxic glazed grade A porcelain that is chip-resistant. Safe for the microwave, oven, freezer, and dishwasher, with a comfortable handle that stays cool when heated.",
+        image: "/images/products/coffee-mug-01.jpg",
+        imageAlt: "Set of four assorted-color ceramic coffee mugs",
+        link: "https://link.amazon/B0au7UKTo",
+        available: true
+    },
+    "accent-pillow-01": {
+        name: "Fancy Homi 2-Pack Boho Corduroy Pillow Covers (18 x 18 in)",
+        description: "A 2-pack of 18 x 18 inch decorative pillow covers in soft cream corduroy, with a cross-hatch patchwork front and a solid-color back. They have a hidden zipper for easy insertion (covers only—no inserts included) and are machine washable on gentle.",
+        image: "/images/products/accent-pillow-01.jpg",
+        imageAlt: "Pair of cream corduroy boho throw pillow covers",
+        link: "https://link.amazon/B08FSp7Ut",
         available: true
     }
 };
