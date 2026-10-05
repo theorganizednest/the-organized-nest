@@ -1,5 +1,5 @@
 /* =========================================
-   THE ORGANIZED NEST - SPRINT 5 CSS
+   THE ORGANIZED NEST - SPRINT 10 CSS
    ========================================= */
 
 /* 1. CSS VARIABLES & RESET */
@@ -161,31 +161,12 @@ section { padding: 4rem 0; }
 .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: var(--border-radius); font-family: var(--font-body); font-size: 1rem; }
 .form-group textarea { resize: vertical; min-height: 150px; }
 
-/* 13. CATEGORY PAGE STYLES (NEW) */
-.category-hero {
-    background-color: var(--color-sage);
-    color: white;
-    text-align: center;
-    padding: 4rem 20px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.category-hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.3);
-}
-.category-hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 0 auto;
-}
+/* 13. CATEGORY PAGE STYLES */
+.category-hero { background-color: var(--color-sage); color: white; text-align: center; padding: 4rem 20px; background-size: cover; background-position: center; position: relative; }
+.category-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
+.category-hero-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
 .category-hero h1 { color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3); margin-bottom: 1rem; }
 .category-hero p { font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
-
 .category-articles-section { padding: 4rem 0; }
 
 /* 14. RESPONSIVE DESIGN */
@@ -211,4 +192,34 @@ section { padding: 4rem 0; }
     .newsletter-form input, .newsletter-form button { width: 100%; }
     .article-hero-img { height: 250px; }
     .article-content { font-size: 1rem; }
+}
+
+/* 15. PINTEREST "PIN IT" BUTTON (NEW - Sprint 10) */
+.article-hero-wrap { position: relative; width: 100%; }
+
+.pin-it-btn {
+    position: absolute;
+    top: 3rem;
+    left: 12px;
+    background-color: #E60023;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 5;
+}
+
+.pin-it-btn:hover {
+    background-color: #C4001D;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .pin-it-btn { top: 2.6rem; left: 8px; padding: 6px 12px; font-size: 0.8rem; }
 }

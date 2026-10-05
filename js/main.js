@@ -1,6 +1,5 @@
-// Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Mobile Menu Toggle Functionality
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close mobile menu when clicking outside of it
     document.addEventListener('click', (event) => {
         if (mainNav && mainNav.classList.contains('active')) {
             if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Back to Top Button Functionality
     const backToTopBtn = document.getElementById('back-to-top');
-    
+
     if (backToTopBtn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -47,15 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput && searchResultsContainer && typeof siteArticles !== 'undefined') {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
-            searchResultsContainer.innerHTML = ''; 
+            searchResultsContainer.innerHTML = '';
 
             if (query.length < 2) {
                 searchResultsContainer.style.display = 'none';
                 return;
             }
 
-            const filteredArticles = siteArticles.filter(article => 
-                article.title.toLowerCase().includes(query) || 
+            const filteredArticles = siteArticles.filter(article =>
+                article.title.toLowerCase().includes(query) ||
                 article.category.toLowerCase().includes(query) ||
                 article.description.toLowerCase().includes(query)
             );
@@ -65,10 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const resultItem = document.createElement('a');
                     resultItem.href = article.url;
                     resultItem.className = 'search-result-item';
-                    resultItem.innerHTML = `
-                        <span class="search-result-category">${article.category}</span>
-                        <span class="search-result-title">${article.title}</span>
-                    `;
+                    resultItem.innerHTML = '<span class="search-result-category">' + article.category + '</span><span class="search-result-title">' + article.title + '</span>';
                     searchResultsContainer.appendChild(resultItem);
                 });
                 searchResultsContainer.style.display = 'block';
@@ -88,17 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Product Registry System (NEW - Sprint 8)
-    // Binabasa nito ang mga card na may data-product attribute,
-    // tapos ina-update ang laman nila mula sa js/products-data.js.
-    // Kung mag-fail ang JavaScript, mananatili ang static HTML fallback sa card.
+    // 4. Product Registry System
     if (typeof PRODUCT_REGISTRY !== 'undefined') {
         document.querySelectorAll('[data-product]').forEach(card => {
             const id = card.getAttribute('data-product');
             const product = PRODUCT_REGISTRY[id];
             if (!product) return;
 
-            // Itago ang product sa buong site kung out of stock / unavailable
             if (product.available === false) {
                 card.style.display = 'none';
                 return;
@@ -120,21 +111,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. Amazon Affiliate Tag Injector
-    const AMAZON_TAG = "organizedne02-20"; 
-    
+    const AMAZON_TAG = "organizedne02-20";
+
     document.querySelectorAll('.amazon-affiliate-link').forEach(link => {
         let href = link.getAttribute('href');
         if (href && href !== '#' && (href.includes('amazon.com') || href.includes('amzn.to') || href.includes('link.amazon'))) {
             if (href.includes('?')) {
                 if (!href.includes('tag=')) {
-                    href += `&tag=${AMAZON_TAG}`;
+                    href += '&tag=' + AMAZON_TAG;
                 }
             } else {
-                href += `?tag=${AMAZON_TAG}`;
+                href += '?tag=' + AMAZON_TAG;
             }
             link.setAttribute('href', href);
         }
     });
+
+    // 6. Pinterest "Pin It" Button (auto-injected sa lahat ng articles)
+    const heroImg = document.querySelector('.article-hero-img');
+    if (heroImg) {
+        const wrap = document.createElement('div');
+        wrap.className = 'article-hero-wrap';
+        heroImg.parentNode.insertBefore(wrap, heroImg);
+        wrap.appendChild(heroImg);
+
+        const pinBtn = document.createElement('button');
+        pinBtn.className = 'pin-it-btn';
+        pinBtn.setAttribute('aria-label', 'Save this image to Pinterest');
+        pinBtn.innerHTML = 'Pin it';
+        wrap.appendChild(pinBtn);
+
+        pinBtn.addEventListener('click', () => {
+            const pageUrl = encodeURIComponent(window.location.href);
+            const imgUrl = encodeURIComponent(new URL(heroImg.src, window.location.href).href);
+            const desc = encodeURIComponent(document.title);
+            const shareUrl = 'https://www.pinterest.com/pin/create/button/?url=' + pageUrl + '&media=' + imgUrl + '&description=' + desc;
+            window.open(shareUrl, '_blank', 'noopener');
+        });
+    }
 
     console.log("The Organized Nest: JavaScript loaded successfully.");
 });
