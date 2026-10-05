@@ -1,5 +1,5 @@
 /* =========================================
-   THE ORGANIZED NEST - SPRINT 10 CSS
+   THE ORGANIZED NEST - SPRINT 10.1 CSS
    ========================================= */
 
 /* 1. CSS VARIABLES & RESET */
@@ -136,7 +136,11 @@ section { padding: 4rem 0; }
 .toc a:hover { text-decoration: underline; }
 
 .product-card { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; background-color: var(--color-card); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow); margin: 2.5rem 0; align-items: center; }
-.product-image img { width: 100%; height: 250px; object-fit: cover; border-radius: var(--border-radius); }
+
+/* PRODUCT IMAGE FIX (Sprint 10.1): contain + white bg = crisp, buong product, walang crop */
+.product-image { background-color: #ffffff; border-radius: var(--border-radius); }
+.product-image img { width: 100%; height: 280px; object-fit: contain; border-radius: var(--border-radius); }
+
 .product-info h3 { font-size: 1.4rem; margin-bottom: 0.5rem; margin-top: 0; }
 .product-info p { font-size: 1rem; color: var(--color-text-light); margin-bottom: 1.5rem; }
 
@@ -173,7 +177,7 @@ section { padding: 4rem 0; }
 @media (max-width: 900px) {
     .header-search { display: none; }
     .product-card { grid-template-columns: 1fr; }
-    .product-image img { height: 200px; }
+    .product-image img { height: 240px; }
 }
 
 @media (max-width: 768px) {
@@ -192,9 +196,10 @@ section { padding: 4rem 0; }
     .newsletter-form input, .newsletter-form button { width: 100%; }
     .article-hero-img { height: 250px; }
     .article-content { font-size: 1rem; }
+    .pin-it-btn { top: 2.6rem; left: 8px; padding: 6px 12px; font-size: 0.8rem; }
 }
 
-/* 15. PINTEREST "PIN IT" BUTTON (NEW - Sprint 10) */
+/* 15. PINTEREST "PIN IT" BUTTON */
 .article-hero-wrap { position: relative; width: 100%; }
 
 .pin-it-btn {
@@ -218,8 +223,4 @@ section { padding: 4rem 0; }
 .pin-it-btn:hover {
     background-color: #C4001D;
     transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-    .pin-it-btn { top: 2.6rem; left: 8px; padding: 6px 12px; font-size: 0.8rem; }
 }
