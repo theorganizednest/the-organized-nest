@@ -88,12 +88,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Amazon Affiliate Tag Injector
+    // 4. Product Registry System (NEW - Sprint 8)
+    // Binabasa nito ang mga card na may data-product attribute,
+    // tapos ina-update ang laman nila mula sa js/products-data.js.
+    // Kung mag-fail ang JavaScript, mananatili ang static HTML fallback sa card.
+    if (typeof PRODUCT_REGISTRY !== 'undefined') {
+        document.querySelectorAll('[data-product]').forEach(card => {
+            const id = card.getAttribute('data-product');
+            const product = PRODUCT_REGISTRY[id];
+            if (!product) return;
+
+            // Itago ang product sa buong site kung out of stock / unavailable
+            if (product.available === false) {
+                card.style.display = 'none';
+                return;
+            }
+
+            const nameEl = card.querySelector('.product-info h3');
+            const descEl = card.querySelector('.product-info p');
+            const imgEl = card.querySelector('.product-image img');
+            const linkEl = card.querySelector('.amazon-affiliate-link');
+
+            if (nameEl && product.name) nameEl.textContent = product.name;
+            if (descEl && product.description) descEl.textContent = product.description;
+            if (imgEl && product.image) {
+                imgEl.src = product.image;
+                imgEl.alt = product.imageAlt || product.name;
+            }
+            if (linkEl && product.link) linkEl.setAttribute('href', product.link);
+        });
+    }
+
+    // 5. Amazon Affiliate Tag Injector
     const AMAZON_TAG = "organizedne02-20"; 
     
     document.querySelectorAll('.amazon-affiliate-link').forEach(link => {
         let href = link.getAttribute('href');
-        // Check if it's an Amazon link and doesn't already have a tag
         if (href && href !== '#' && (href.includes('amazon.com') || href.includes('amzn.to') || href.includes('link.amazon'))) {
             if (href.includes('?')) {
                 if (!href.includes('tag=')) {
