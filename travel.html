@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore all travel guides, packing lists, and essential gear recommendations for your next trip.">
+    <title>Travel Guides & Essentials | The Organized Nest</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">The Organized Nest</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Home & Organization</a></li>
+                    <li><a href="#">Kitchen</a></li>
+                    <li><a href="travel.html" class="active">Travel</a></li>
+                    <li><a href="#">Concerts & Events</a></li>
+                    <li><a href="#">Seasonal</a></li>
+                    <li><a href="#">Gift Guides</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <input type="text" placeholder="Search finds..." aria-label="Search">
+                <div id="search-results" class="search-results-container"></div>
+                <button type="button" aria-label="Submit search">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Category Hero Banner -->
+        <section class="category-hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80');">
+            <div class="category-hero-content">
+                <h1>Travel Guides & Essentials</h1>
+                <p>Packing lists, gear recommendations, and smart tips for stress-free trips.</p>
+            </div>
+        </section>
+
+        <!-- Category Articles Grid -->
+        <section class="category-articles-section">
+            <div class="container">
+                <div class="article-grid">
+                    <article class="article-card">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Travel packing cubes">
+                        <div class="article-content">
+                            <span class="category-tag">Travel</span>
+                            <h3>The Ultimate Carry-On Packing List</h3>
+                            <p>Travel light without sacrificing comfort. Here are the travel essentials you need for your next trip.</p>
+                            <a href="articles/travel-essentials.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                    <!-- Placeholder for future travel articles -->
+                    <article class="article-card">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Airplane wing view">
+                        <div class="article-content">
+                            <span class="category-tag">Travel</span>
+                            <h3>10 Tips for Long-Haul Flights</h3>
+                            <p>Stay comfortable and arrive refreshed with these practical tips for surviving 10+ hour flights.</p>
+                            <a href="#" class="read-more">Coming Soon →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container newsletter-content">
+                <h2>Get the latest finds & guides</h2>
+                <p>Join our community and receive practical tips and curated recommendations straight to your inbox.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! (Placeholder)');">
+                    <input type="email" placeholder="Your email address" required aria-label="Email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column"><h4>The Organized Nest</h4><p>Smart finds for everyday living.</p></div>
+            <div class="footer-column"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Amazon Finds</a></li></ul></div>
+            <div class="footer-column"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li></ul></div>
+        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 The Organized Nest. All rights reserved.</p><p class="affiliate-disclaimer">Affiliate Disclosure: As an Amazon Associate, The Organized Nest earns from qualifying purchases.</p></div>
+    </footer>
+    <script src="js/search-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

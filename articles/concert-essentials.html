@@ -28,7 +28,11 @@
                     <li><a href="#">Gift Guides</a></li>
                 </ul>
             </nav>
-            <div class="header-search"><input type="text" placeholder="Search finds..." aria-label="Search"><button type="button"></button></div>
+            <div class="header-search">
+                <input type="text" placeholder="Search finds..." aria-label="Search">
+                <div id="search-results" class="search-results-container"></div>
+                <button type="button" aria-label="Submit search">🔍</button>
+            </div>
         </div>
     </header>
 
@@ -95,7 +99,7 @@
                 <div class="article-grid">
                     <article class="article-card">
                         <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Travel packing cubes">
-                        <div class="article-content"><span class="category-tag">Travel</span><h3>The Ultimate Carry-On Packing List</h3><p>Travel light without sacrificing comfort. Here are the travel essentials you need for your next trip.</p><a href="#" class="read-more">Read More →</a></div>
+                        <div class="article-content"><span class="category-tag">Travel</span><h3>The Ultimate Carry-On Packing List</h3><p>Travel light without sacrificing comfort. Here are the travel essentials you need for your next trip.</p><a href="travel-essentials.html" class="read-more">Read More →</a></div>
                     </article>
                     <article class="article-card">
                         <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Cozy home decor">
@@ -124,25 +128,13 @@
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-column"><h4>The Organized Nest</h4><p>Smart finds for everyday living.</p></div>
-            <div class="footer-column">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="#">Amazon Finds</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="../privacy.html">Privacy Policy</a></li>
-                    <li><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                </ul>
-            </div>
+            <div class="footer-column"><h4>Explore</h4><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="#">Amazon Finds</a></li></ul></div>
+            <div class="footer-column"><h4>Legal</h4><ul><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></li></ul></div>
         </div>
         <div class="container footer-bottom"><p>&copy; 2026 The Organized Nest. All rights reserved.</p><p class="affiliate-disclaimer">Affiliate Disclosure: As an Amazon Associate, The Organized Nest earns from qualifying purchases.</p></div>
     </footer>
     <button id="back-to-top" aria-label="Back to top">↑</button>
+    <script src="../js/search-data.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('back-to-top');
     
     if (backToTopBtn) {
-        // Show button when scrolling down 300px
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopBtn.style.display = 'block';
@@ -36,12 +35,58 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Smooth scroll to top when clicked
         backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // 3. Client-Side Search Functionality
+    const searchInput = document.querySelector('.header-search input');
+    const searchResultsContainer = document.getElementById('search-results');
+
+    if (searchInput && searchResultsContainer && typeof siteArticles !== 'undefined') {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            searchResultsContainer.innerHTML = ''; // Clear previous results
+
+            if (query.length < 2) {
+                searchResultsContainer.style.display = 'none';
+                return;
+            }
+
+            // Filter articles
+            const filteredArticles = siteArticles.filter(article => 
+                article.title.toLowerCase().includes(query) || 
+                article.category.toLowerCase().includes(query) ||
+                article.description.toLowerCase().includes(query)
+            );
+
+            if (filteredArticles.length > 0) {
+                filteredArticles.forEach(article => {
+                    const resultItem = document.createElement('a');
+                    resultItem.href = article.url;
+                    resultItem.className = 'search-result-item';
+                    resultItem.innerHTML = `
+                        <span class="search-result-category">${article.category}</span>
+                        <span class="search-result-title">${article.title}</span>
+                    `;
+                    searchResultsContainer.appendChild(resultItem);
+                });
+                searchResultsContainer.style.display = 'block';
+            } else {
+                const noResult = document.createElement('div');
+                noResult.className = 'search-result-item no-results';
+                noResult.textContent = 'No articles found.';
+                searchResultsContainer.appendChild(noResult);
+                searchResultsContainer.style.display = 'block';
+            }
+        });
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-search')) {
+                searchResultsContainer.style.display = 'none';
+            }
         });
     }
 

@@ -18,13 +18,17 @@
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="#">Home & Organization</a></li>
                     <li><a href="#">Kitchen</a></li>
-                    <li><a href="#">Travel</a></li>
+                    <li><a href="travel.html">Travel</a></li>
                     <li><a href="#">Concerts & Events</a></li>
                     <li><a href="#">Seasonal</a></li>
                     <li><a href="#">Gift Guides</a></li>
                 </ul>
             </nav>
-            <div class="header-search"><input type="text" placeholder="Search finds..." aria-label="Search"><button type="button">🔍</button></div>
+            <div class="header-search">
+                <input type="text" placeholder="Search finds..." aria-label="Search">
+                <div id="search-results" class="search-results-container"></div>
+                <button type="button" aria-label="Submit search">🔍</button>
+            </div>
         </div>
     </header>
 
@@ -57,8 +61,8 @@
             <div class="section-header"><h2>Browse by Category</h2></div>
             <div class="category-grid">
                 <a href="#" class="category-card"><span>🏠 Home</span></a>
-                <a href="#" class="category-card"><span>🍳 Kitchen</span></a>
-                <a href="#" class="category-card"><span>️ Travel</span></a>
+                <a href="#" class="category-card"><span> Kitchen</span></a>
+                <a href="travel.html" class="category-card"><span>️ Travel</span></a>
                 <a href="#" class="category-card"><span>🎵 Concerts & Events</span></a>
                 <a href="#" class="category-card"><span> Seasonal</span></a>
                 <a href="#" class="category-card"><span>🎁 Gift Guides</span></a>
@@ -69,12 +73,21 @@
             <div class="section-header"><h2>Latest Articles</h2></div>
             <div class="article-grid">
                 <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Cozy fall home decor">
+                    <div class="article-content">
+                        <span class="category-tag">Seasonal</span>
+                        <h3>Cozy Fall Home Finds Under $50</h3>
+                        <p>Get your home ready for autumn with these affordable, stylish, and practical decor upgrades.</p>
+                        <a href="articles/seasonal-fall.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="article-card">
                     <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80" alt="Organized kitchen pantry">
                     <div class="article-content">
                         <span class="category-tag">Kitchen</span>
                         <h3>10 Pantry Organization Hacks That Actually Work</h3>
                         <p>Transform your chaotic cabinets into a calm, functional space with these simple storage solutions.</p>
-                        <a href="#" class="read-more">Read More →</a>
+                        <a href="articles/kitchen-organization.html" class="read-more">Read More →</a>
                     </div>
                 </article>
                 <article class="article-card">
@@ -83,16 +96,16 @@
                         <span class="category-tag">Travel</span>
                         <h3>The Ultimate Carry-On Packing List</h3>
                         <p>Travel light without sacrificing comfort. Here are the travel essentials you need for your next trip.</p>
-                        <a href="#" class="read-more">Read More →</a>
+                        <a href="articles/travel-essentials.html" class="read-more">Read More →</a>
                     </div>
                 </article>
                 <article class="article-card">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Cozy home decor">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=600&q=80" alt="Concert crowd">
                     <div class="article-content">
-                        <span class="category-tag">Seasonal</span>
-                        <h3>Cozy Fall Home Finds Under $50</h3>
-                        <p>Get your home ready for autumn with these affordable, stylish, and practical decor upgrades.</p>
-                        <a href="#" class="read-more">Read More →</a>
+                        <span class="category-tag">Concerts & Events</span>
+                        <h3>Concert Survival Kit: 10 Essentials</h3>
+                        <p>Don't get caught unprepared. Here is your ultimate checklist for staying comfortable and powered up at your next outdoor event.</p>
+                        <a href="articles/concert-essentials.html" class="read-more">Read More →</a>
                     </div>
                 </article>
             </div>
@@ -113,24 +126,12 @@
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-column"><h4>The Organized Nest</h4><p>Smart finds for everyday living.</p></div>
-            <div class="footer-column">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Amazon Finds</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                </ul>
-            </div>
+            <div class="footer-column"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Amazon Finds</a></li></ul></div>
+            <div class="footer-column"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li></ul></div>
         </div>
         <div class="container footer-bottom"><p>&copy; 2026 The Organized Nest. All rights reserved.</p><p class="affiliate-disclaimer">Affiliate Disclosure: As an Amazon Associate, The Organized Nest earns from qualifying purchases.</p></div>
     </footer>
+    <script src="js/search-data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
