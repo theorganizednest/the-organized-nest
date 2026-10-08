@@ -193,5 +193,47 @@ const PRODUCT_REGISTRY = {
         imageAlt: "Pair of cream corduroy boho throw pillow covers",
         link: "https://link.amazon/B08FSp7Ut",
         available: true
+    },
+
+    // --- GIFT GUIDE ADDITIONS (5 New Items) ---
+    "weighted-blanket-01": {
+        name: "ZonLi Weighted Blanket for Adults (60\" x 80\", 20 lbs)",
+        description: "A queen-size weighted blanket filled with temperature-regulating glass beads and encased in OEKO-TEX certified fabric. Its 5+2 layer lining prevents bead leakage, providing deep-pressure stimulation for relaxation and better sleep.",
+        image: "/images/products/weighted-blanket-01.jpg",
+        imageAlt: "Dark grey ZonLi weighted blanket folded on a bed",
+        link: "https://link.amazon/B0dmk6lOh",
+        available: true
+    },
+    "wine-opener-set-01": {
+        name: "Secura Electric Wine Opener Set (Rechargeable)",
+        description: "An automatic electric corkscrew with a stainless steel finish and integrated foil cutter. It removes corks in seconds via a simple press-button mechanism and includes a charging base for convenient storage near your wine fridge.",
+        image: "/images/products/wine-opener-set-01.jpg",
+        imageAlt: "Stainless steel Secura electric wine opener with charging base",
+        link: "https://link.amazon/B0iNmvuTF",
+        available: true
+    },
+    "cutting-board-01": {
+        name: "Personalized Wooden Cutting Board (Engraved)",
+        description: "A custom laser-engraved wooden cutting board ideal for weddings, anniversaries, or housewarmings. The deep engraving will not fade or peel, making it a durable keepsake for charcuterie, cheese, or everyday kitchen prep.",
+        image: "/images/products/cutting-board-01.jpg",
+        imageAlt: "Personalized engraved wooden cutting board with names and date",
+        link: "https://link.amazon/B04LauxVp",
+        available: true
+    },
+    "slippers-01": {
+        name: "KuaiLu Women's Fuzzy Memory Foam Slippers",
+        description: "Warm house shoes featuring a plush faux fur collar and high-density memory foam arch support. With a non-slip rubber sole and available in 12 colors, they offer marshmallow-soft comfort for lounging indoors or stepping out briefly.",
+        image: "/images/products/slippers-01.jpg",
+        imageAlt: "Cozy fuzzy women's slippers with memory foam support",
+        link: "https://link.amazon/B06TlnETO",
+        available: true
+    },
+    "photo-frame-01": {
+        name: "FRAMEO 10.1-Inch Smart WiFi Digital Photo Frame (32GB)",
+        description: "A touch-screen digital frame with built-in 32GB memory that receives photos and short videos instantly from anywhere via the Frameo app. Features auto-rotation, calendar sync, collage mode, and interactive emoji reactions for family sharing.",
+        image: "/images/products/photo-frame-01.jpg",
+        imageAlt: "Modern 10.1-inch WiFi digital photo frame displaying family photos",
+        link: "https://link.amazon/B0fHEXNsI",
+        available: true
     }
 };
