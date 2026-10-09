@@ -237,7 +237,7 @@ const PRODUCT_REGISTRY = {
         available: true
     },
 
-    // --- KITCHEN: FRIDGE RESET (8 Items) ---
+    // --- KITCHEN: FRIDGE RESET ---
     "fridge-bins-set-01": {
         name: "Vtopmart 8 Pack Clear Food Storage Organizer Bins",
         description: "A set of crystal-clear, BPA-free polyethylene bins with 3 removable dividers each. Perfect for organizing snack packets, spice jars, and small pantry items, bringing visibility and structure to any shelf or drawer.",
@@ -300,6 +300,72 @@ const PRODUCT_REGISTRY = {
         image: "/images/products/fridge-labels-01.jpg",
         imageAlt: "Roll of 1000 blank white removable food date labels for pantry and fridge organization",
         link: "https://link.amazon/B01JlcCP6",
+        available: true
+    },
+
+    // --- KITCHEN: CAFÉ CORNER (8 Items) ---
+    "coffee-canister-01": {
+        name: "ShanSon Airtight Coffee Canister with Date Tracker",
+        description: "A food-grade 304 stainless steel container featuring an innovative CO₂ valve system to release gas or block moisture. Includes a built-in date tracker and scoop, keeping beans fresh and aromatic by blocking harmful light.",
+        image: "/images/products/coffee-canister-01.jpg",
+        imageAlt: "Beige stainless steel airtight coffee canister with date tracker",
+        link: "https://link.amazon/B0616rFn7",
+        available: true
+    },
+    "tea-organizer-01": {
+        name: "8-Compartment Bamboo Tea Bag Organizer Box with Drawer",
+        description: "A handcrafted bamboo storage box featuring a clear acrylic lid with a magnetic close and 8 compartments to sort tea bags by flavor. Includes a built-in pull-out drawer for extra storage of loose tea, honey sticks, or sweeteners.",
+        image: "/images/products/tea-organizer-01.jpg",
+        imageAlt: "Bamboo tea bag organizer box with clear acrylic lid and drawer",
+        link: "https://link.amazon/B0ilcEv5E",
+        available: true
+    },
+    "mug-rack-01": {
+        name: "HuggieGems Magnetic Water Bottle & Mug Holder for Fridge (4-Pack)",
+        description: "Strong magnetic hooks that stick directly to the side of your fridge or any metal surface. A brilliant space-saving hack to hang mugs, cups, or water bottles off the counter, keeping your café station clean and accessible.",
+        image: "/images/products/mug-rack-01.jpg",
+        imageAlt: "Black magnetic hooks holding cups on the side of a refrigerator",
+        link: "https://link.amazon/B0bjP4fGt",
+        available: true
+    },
+    "pod-drawer-01": {
+        name: "Rustic Wooden Coffee Pod Drawer Organizer (72 Capacity)",
+        description: "A farmhouse-style wood and metal drawer that holds up to 72 single-serve K-Cup pods. Designed to sit neatly under your coffee maker, it provides smooth-gliding storage to sort by flavor and grab your morning brew in seconds.",
+        image: "/images/products/pod-drawer-01.jpg",
+        imageAlt: "Wooden coffee pod drawer organizer sitting under a coffee maker",
+        link: "https://link.amazon/B08ljGKCj",
+        available: true
+    },
+    "syrup-caddy-01": {
+        name: "Expandable 2-Tier Coffee Syrup Rack Organizer (Holds 12 Bottles)",
+        description: "An adjustable metal countertop rack that expands from 12.2 to 22 inches to hold up to 12 standard 750mL syrup bottles. Keeps your flavor bar visible, organized, and prevents sticky rings on your coffee station counter.",
+        image: "/images/products/syrup-caddy-01.jpg",
+        imageAlt: "Expandable metal coffee syrup bottle organizer rack on counter",
+        link: "https://link.amazon/B0cvMFET9",
+        available: true
+    },
+    "milk-frother-01": {
+        name: "YUSWKO Rechargeable Handheld Milk Frother Wand (3 Speeds)",
+        description: "A USB-rechargeable electric whisk with 3 speed settings and 3 detachable stainless steel heads for frothing milk, mixing powders, or beating eggs. Creates creamy café-quality latte foam in 15-20 seconds without the noise.",
+        image: "/images/products/milk-frother-01.jpg",
+        imageAlt: "Rechargeable handheld milk frother wand with multiple whisk heads",
+        link: "https://link.amazon/B0hh692ug",
+        available: true
+    },
+    "gooseneck-kettle-01": {
+        name: "Cosori Electric Gooseneck Kettle with Temperature Control (0.8L)",
+        description: "A precision pour-over kettle featuring 5 precise temperature presets and a 1-hour keep-warm function. The ergonomic handle and refined spout allow for a steady, controlled pour, while the 304 stainless steel interior ensures pure taste.",
+        image: "/images/products/gooseneck-kettle-01.jpg",
+        imageAlt: "Black electric gooseneck kettle with temperature control base",
+        link: "https://link.amazon/B0dKbGXNt",
+        available: true
+    },
+    "drip-tray-mat-01": {
+        name: "Silicone Coffee Bar Mat with Detachable Dish Drying Rack",
+        description: "A 24x16 inch heat-resistant silicone mat with a raised edge to contain spills and protect countertops. Features an innovative detachable drying rack section to air-dry cups, spoons, and filters right next to your coffee maker.",
+        image: "/images/products/drip-tray-mat-01.jpg",
+        imageAlt: "Silicone coffee bar counter mat with attached dish drying rack",
+        link: "https://link.amazon/B028h8med",
         available: true
     }
 };

@@ -207,7 +207,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "throw-blanket-01": "seasonal", "scented-candle-01": "seasonal", "coffee-mug-01": "seasonal", "accent-pillow-01": "seasonal",
             "weighted-blanket-01": "gift", "wine-opener-set-01": "gift", "cutting-board-01": "gift", "slippers-01": "gift", "photo-frame-01": "gift",
             "fridge-bins-set-01": "kitchen", "produce-keeper-01": "kitchen", "egg-dispenser-01": "kitchen", "fridge-turntable-01": "kitchen",
-            "can-dispenser-01": "kitchen", "freezer-bins-01": "kitchen", "fridge-dividers-01": "kitchen", "fridge-labels-01": "kitchen"
+            "can-dispenser-01": "kitchen", "freezer-bins-01": "kitchen", "fridge-dividers-01": "kitchen", "fridge-labels-01": "kitchen",
+            "coffee-canister-01": "kitchen", "tea-organizer-01": "kitchen", "mug-rack-01": "kitchen", "pod-drawer-01": "kitchen",
+            "syrup-caddy-01": "kitchen", "milk-frother-01": "kitchen", "gooseneck-kettle-01": "kitchen", "drip-tray-mat-01": "kitchen"
         };
         function renderCards(filterCat) {
             findsGrid.innerHTML = '';
