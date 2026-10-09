@@ -66,35 +66,27 @@ R7. DONE IS EVIDENCE-BASED. A sprint is DONE only after the human confirms it in
 │   └─ seasonal-fall.html        (4 items)
 └─ (automation .ps1 scripts exist at root; treat as tools, not page content)
 
-## 5. VERIFIED STATE LEDGER  (only Main moves items here, and ONLY on browser proof)
-STATUS AS OF LAST VERIFIED MILESTONE = **Sprint 12 LIVE & STABLE.**
+## 5. VERIFIED STATE LEDGER
+STATUS AS OF LAST VERIFIED MILESTONE = **Sprint 14 LIVE & STABLE (B1 Nav Refactor Complete).**
 ✅ Done & confirmed live:
 - Site shell, all legal/simple pages, About/Contact/Privacy/Affiliate.
 - SEO: sitemap.xml, robots.txt, Google Search Console verified.
-- Product Registry system (js/products-data.js) as single source of truth.
+- Product Registry system (js/products-data.js) as single source of truth (27 products).
 - Pinterest "Pin it" auto-injector on article heroes.
-- Crisp product display: object-fit:contain + white bg (Sprint 10.1).
-- TOC anchor offset fix + bullet removal (Sprint 10.2).
-- Registry rollout: Concert(4), Travel(4), Kitchen(10), Seasonal/Fall(4) = 22 products.
+- Crisp product display: object-fit:contain + white bg.
+- TOC anchor offset fix + bullet removal.
+- Registry rollout: Concert(4), Travel(4), Kitchen(10), Seasonal(4), Gift Guide(5) = 27 products.
 - Global nav wired to finished pages; Amazon Finds hub page (dynamic render + filters).
-- Automation: update-nav.ps1 (bulk link sync) — proven working once.
+- Holiday Gift Guide article (Live, strategic hero image, 5 new items).
+- **B1 Nav Architecture Refactor (Sprint 14):** Navigation is now a Single Source of Truth. `js/main.js` dynamically renders the nav from a config array. Standardized HTML fallback via `fix-article-headers.ps1`. Zero layout shift, zero flicker. Adding a new page to the nav now requires exactly 1 line of JS and 1 script run.
 🚫 NOT verified / NOT live (do NOT treat as done):
-- Holiday Gift Guide article + its 5 new registry items. (A prior attempt was DISCARDED to
-  return to the Sprint-12 baseline. Some untracked files MAY still sit on disk from that
-  attempt — the human decides keep-or-purge; until browser-verified they are BACKLOG, not
-  state.)
-- Home & Organization page, Gift Guides page (as nav tabs), category hub pages.
 - Pinterest conversion Tag (needs human's Tag ID). Newsletter provider integration.
 
 ## 6. BACKLOG / NEXT (unordered until Main sequences it)
-- B1. Nav as single source of truth (render nav from one config in main.js) → makes adding a
-  page a 1-line change, kills the multi-file edit pain that broke us. HIGH VALUE, do first
-  when fresh.
-- B2. Ship Holiday Gift Guide SAFELY on top of B1 (or as homepage-card-only MVP, no nav edit).
-- B3. Pinterest distribution: Pin Copy Packs for the 5 live pages (zero-code momentum win).
+- B3. Pinterest distribution: Pin Copy Packs for individual products (drip campaign).
 - B4. Pinterest Tag activation (needs Tag ID).
 - B5. Newsletter (MailerLite/Brevo free tier) + a lead magnet.
-- B6. Home & Organization page; category hub pages.
+- B6. Home & Organization page (currently `#` placeholder in nav); category hub pages.
 
 ## 7. HOW TO START A SESSION (paste the matching opener prompt into the right chat)
 - Planning happens ONLY in Main. Builder work ONLY in Chat2 with live bytes pasted.

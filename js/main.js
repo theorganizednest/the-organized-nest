@@ -2,14 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========================================
     // 0. DYNAMIC NAV RENDERER (Sprint B1)
-    //    Single source of truth for site nav.
-    //    Replaces <nav class="main-nav"> innerHTML
-    //    at runtime using NAV_ITEMS config.
-    //    Includes flicker-prevention logic.
     // ========================================
     const NAV_ITEMS = [
         { label: 'Home', href: 'index.html', matchPattern: '^/(index\\.html)?$' },
-        { label: 'Kitchen', href: 'articles/kitchen-organization.html', matchPattern: 'kitchen-organization\\.html$' },
+        { label: 'Kitchen', href: 'kitchen.html', matchPattern: 'kitchen\\.html$' },
         { label: 'Travel', href: 'travel.html', matchPattern: '^/travel\\.html$' },
         { label: 'Concerts & Events', href: 'articles/concert-essentials.html', matchPattern: 'concert-essentials\\.html$' },
         { label: 'Seasonal', href: 'articles/seasonal-fall.html', matchPattern: 'seasonal-fall\\.html$' },
@@ -31,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var nav = document.querySelector('.main-nav');
         if (!nav) return;
 
-        // FLICKER FIX: Hide briefly during DOM manipulation to prevent 
-        // the browser from painting the old static nav and new dynamic nav simultaneously.
         nav.style.visibility = 'hidden';
 
         var html = '<ul class="nav-list">';
@@ -45,8 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         nav.innerHTML = html;
 
-        // Restore visibility on the very next paint frame. 
-        // This makes the swap instantaneous to the human eye, eliminating the "shake" or "multiplying tabs" effect.
         requestAnimationFrame(function() {
             nav.style.visibility = 'visible';
         });
@@ -213,7 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "bag-organizer-01": "kitchen", "cereal-dispensers-01": "kitchen", "under-sink-organizer-01": "kitchen", "drawer-dividers-01": "kitchen",
             "cabinet-door-basket-01": "kitchen", "can-organizer-01": "kitchen",
             "throw-blanket-01": "seasonal", "scented-candle-01": "seasonal", "coffee-mug-01": "seasonal", "accent-pillow-01": "seasonal",
-            "weighted-blanket-01": "gift", "wine-opener-set-01": "gift", "cutting-board-01": "gift", "slippers-01": "gift", "photo-frame-01": "gift"
+            "weighted-blanket-01": "gift", "wine-opener-set-01": "gift", "cutting-board-01": "gift", "slippers-01": "gift", "photo-frame-01": "gift",
+            "fridge-bins-set-01": "kitchen", "produce-keeper-01": "kitchen", "egg-dispenser-01": "kitchen", "fridge-turntable-01": "kitchen",
+            "can-dispenser-01": "kitchen", "freezer-bins-01": "kitchen", "fridge-dividers-01": "kitchen", "fridge-labels-01": "kitchen"
         };
         function renderCards(filterCat) {
             findsGrid.innerHTML = '';

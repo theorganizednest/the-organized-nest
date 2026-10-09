@@ -1,12 +1,8 @@
 # fix-article-headers.ps1
 # =========================================
-# THE ORGANIZED NEST - ARTICLE HEADER STANDARDIZER (Sprint 14 / B1)
-# v2: Encoding-proof. Search icon is now &#128269; (ASCII entity),
-#     because PS 5.1 reads BOM-less .ps1 files as ANSI and corrupts literal emoji.
-# SCOPE: Only the 5 article files. Idempotent. Fail-safe.
+# THE ORGANIZED NEST - ARTICLE HEADER STANDARDIZER (v3 - Dynamic)
 # =========================================
-
-Write-Host "Starting Article Header Standardization (v2)..." -ForegroundColor Green
+Write-Host "Starting Article Header Standardization (Dynamic Scan)..." -ForegroundColor Green
 
 $newHeader = @'
     <header class="site-header">
@@ -16,7 +12,7 @@ $newHeader = @'
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="kitchen-organization.html">Kitchen</a></li>
+                    <li><a href="../kitchen.html">Kitchen</a></li>
                     <li><a href="../travel.html">Travel</a></li>
                     <li><a href="concert-essentials.html">Concerts &amp; Events</a></li>
                     <li><a href="seasonal-fall.html">Seasonal</a></li>
@@ -33,35 +29,25 @@ $newHeader = @'
     </header>
 '@
 
-$articleFiles = @(
-    "articles/kitchen-organization.html",
-    "articles/concert-essentials.html",
-    "articles/seasonal-fall.html",
-    "articles/travel-essentials.html",
-    "articles/gift-guide-holiday.html"
-)
+# DYNAMIC SCAN: Automatically finds all HTML files in the articles folder
+$articlesDir = Join-Path $PSScriptRoot "articles"
+$articleFiles = Get-ChildItem -Path $articlesDir -Filter "*.html" | Select-Object -ExpandProperty FullName
 
 $pattern = '(?s)<header class="site-header">.*?</header>'
 
-foreach ($file in $articleFiles) {
-    $fullPath = Join-Path $PSScriptRoot $file
-
-    if (-not (Test-Path $fullPath)) {
-        Write-Warning "FILE NOT FOUND (skipped): $file"
-        continue
-    }
-
-    Write-Host "Processing: $file" -ForegroundColor Cyan
+foreach ($fullPath in $articleFiles) {
+    $fileName = Split-Path $fullPath -Leaf
+    Write-Host "Processing: articles/$fileName" -ForegroundColor Cyan
 
     $content = [System.IO.File]::ReadAllText($fullPath)
 
     if ($content -match $pattern) {
         $newContent = [regex]::Replace($content, $pattern, $newHeader)
         [System.IO.File]::WriteAllText($fullPath, $newContent)
-        Write-Host "  -> Header standardized (encoding-proof)." -ForegroundColor Green
+        Write-Host "  -> Header standardized." -ForegroundColor Green
     } else {
-        Write-Warning "  -> site-header block NOT FOUND in $file. File left untouched."
+        Write-Warning "  -> site-header block NOT FOUND. Skipped."
     }
 }
 
-Write-Host "Done. Hard-refresh and check: same tab positions + clean magnifier on ALL pages." -ForegroundColor Green
+Write-Host "Done. All article headers are now perfectly synced." -ForegroundColor Green

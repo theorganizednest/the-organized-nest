@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="From chaotic pantries to messy fridges, discover practical kitchen storage solutions and organization essentials that make cooking a joy.">
+    <title>Kitchen Organization & Storage Ideas | The Organized Nest</title>
+    <link rel="canonical" href="https://the-organized-nest.netlify.app/kitchen.html">
+    <meta property="og:title" content="Kitchen Organization & Storage Ideas | The Organized Nest">
+    <meta property="og:description" content="Transform your kitchen into a calm, functional space with our curated guides on pantry and fridge organization.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">The Organized Nest</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kitchen.html" class="active">Kitchen</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="articles/concert-essentials.html">Concerts &amp; Events</a></li>
+                    <li><a href="articles/seasonal-fall.html">Seasonal</a></li>
+                    <li><a href="articles/gift-guide-holiday.html">Gift Guides</a></li>
+                    <li><a href="amazon-finds.html">Amazon Finds</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <input type="text" placeholder="Search finds..." aria-label="Search">
+                <div id="search-results" class="search-results-container"></div>
+                <button type="button" aria-label="Submit search">&#128269;</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="category-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80');">
+            <div class="category-hero-content">
+                <h1>Kitchen Organization</h1>
+                <p>From chaotic pantries to messy fridges, discover practical storage solutions that make cooking and prepping a joy.</p>
+            </div>
+        </section>
+
+        <section class="category-articles-section container">
+            <div class="section-header"><h2>Explore Our Kitchen Guides</h2></div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80" alt="Organized kitchen pantry with clear containers">
+                    <div class="article-content">
+                        <span class="category-tag">Pantry</span>
+                        <h3>10 Pantry Organization Essentials That Actually Work</h3>
+                        <p>Transform your chaotic cabinets into a calm, functional space with these simple storage solutions.</p>
+                        <a href="articles/kitchen-organization.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="images/products/fridge-bins-set-01.jpg" alt="Clear acrylic fridge organizer bins">
+                    <div class="article-content">
+                        <span class="category-tag">Fridge & Freezer</span>
+                        <h3>The Clear Fridge Reset: 8 Essentials for a Pinterest-Worthy Refrigerator</h3>
+                        <p>Stop throwing away spoiled food. These clear organizers make everything visible, accessible, and fresh.</p>
+                        <a href="articles/fridge-reset.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container newsletter-content">
+                <h2>Get the latest finds & guides</h2>
+                <p>Join our community and receive practical tips and curated recommendations straight to your inbox.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! (Placeholder)');">
+                    <input type="email" placeholder="Your email address" required aria-label="Email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-column"><h4>The Organized Nest</h4><p>Smart finds for everyday living.</p></div>
+            <div class="footer-column"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="amazon-finds.html">Amazon Finds</a></li></ul></div>
+            <div class="footer-column"><h4>Legal & Social</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li><li><a href="https://www.pinterest.com/organizednestguide/" target="_blank" rel="noopener">Pinterest</a></li></ul></div>
+        </div>
+        <div class="container footer-bottom"><p>&copy; 2026 The Organized Nest. All rights reserved.</p><p class="affiliate-disclaimer">Affiliate Disclosure: As an Amazon Associate, The Organized Nest earns from qualifying purchases.</p></div>
+    </footer>
+    <script src="js/search-data.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

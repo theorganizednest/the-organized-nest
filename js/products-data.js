@@ -79,7 +79,7 @@ const PRODUCT_REGISTRY = {
         available: true
     },
 
-    // --- KITCHEN ORGANIZATION (10 Items) ---
+    // --- KITCHEN ORGANIZATION (PANTRY) ---
     "storage-containers-01": {
         name: "M MCIRCO 10 Pack Glass Food Storage Containers",
         description: "A 10-pack of borosilicate glass meal prep containers with airtight snap-lock lids and silicone seals. They are microwave, freezer, dishwasher, and oven safe, with a stackable design to save cabinet space.",
@@ -161,7 +161,7 @@ const PRODUCT_REGISTRY = {
         available: true
     },
 
-    // --- SEASONAL / FALL (4 Items) ---
+    // --- SEASONAL / FALL ---
     "throw-blanket-01": {
         name: "BEDELITE Ribbed Fleece Throw Blanket (50 x 60 in)",
         description: "A 50 x 60 inch ribbed fleece throw in a soft beige tone, made from plush 300 GSM microfiber polyester with a raised 3D stripe texture. Lightweight and machine washable, it resists shrinking, fading, and shedding—drapes nicely over a couch, bed, or accent chair.",
@@ -195,7 +195,7 @@ const PRODUCT_REGISTRY = {
         available: true
     },
 
-    // --- GIFT GUIDE ADDITIONS (5 New Items) ---
+    // --- GIFT GUIDE ADDITIONS ---
     "weighted-blanket-01": {
         name: "ZonLi Weighted Blanket for Adults (60\" x 80\", 20 lbs)",
         description: "A queen-size weighted blanket filled with temperature-regulating glass beads and encased in OEKO-TEX certified fabric. Its 5+2 layer lining prevents bead leakage, providing deep-pressure stimulation for relaxation and better sleep.",
@@ -234,6 +234,72 @@ const PRODUCT_REGISTRY = {
         image: "/images/products/photo-frame-01.jpg",
         imageAlt: "Modern 10.1-inch WiFi digital photo frame displaying family photos",
         link: "https://link.amazon/B0fHEXNsI",
+        available: true
+    },
+
+    // --- KITCHEN: FRIDGE RESET (8 Items) ---
+    "fridge-bins-set-01": {
+        name: "Vtopmart 8 Pack Clear Food Storage Organizer Bins",
+        description: "A set of crystal-clear, BPA-free polyethylene bins with 3 removable dividers each. Perfect for organizing snack packets, spice jars, and small pantry items, bringing visibility and structure to any shelf or drawer.",
+        image: "/images/products/fridge-bins-set-01.jpg",
+        imageAlt: "Set of 8 clear plastic food storage organizer bins with removable dividers",
+        link: "https://link.amazon/B06tyZQzi",
+        available: true
+    },
+    "produce-keeper-01": {
+        name: "4-Piece Fruit Storage Containers for Fridge with Removable Colander",
+        description: "A 4-piece set of BPA-free produce keepers ranging from 0.32L to 2.7L, featuring airtight sealing rings and locking buckles. The removable colander basket drains water away from berries and vegetables, keeping them fresh up to twice as long.",
+        image: "/images/products/produce-keeper-01.jpg",
+        imageAlt: "Set of 4 clear fridge produce storage containers with removable colander baskets",
+        link: "https://link.amazon/B0bgBJMZE",
+        available: true
+    },
+    "egg-dispenser-01": {
+        name: "Automatic Rolling Egg Holder for Fridge (2-Pack)",
+        description: "A clear, stackable egg dispenser with an auto-rolling design that gently brings the next egg forward without cracking. The pull-out inner tray allows for quick, hassle-free refilling without moving the entire container.",
+        image: "/images/products/egg-dispenser-01.jpg",
+        imageAlt: "Clear automatic rolling egg dispenser container for refrigerator",
+        link: "https://link.amazon/B0hQ9XFzd",
+        available: true
+    },
+    "fridge-turntable-01": {
+        name: "Guzon 12-Inch Clear Lazy Susan Turntable (4-Pack)",
+        description: "A 12-inch rotating organizer made of durable, BPA-free PET with raised edges and built-in handles. The 360-degree smooth spin makes hard-to-reach condiments and jars in deep fridge corners instantly accessible.",
+        image: "/images/products/fridge-turntable-01.jpg",
+        imageAlt: "Clear 12-inch lazy susan turntable organizer with handles",
+        link: "https://link.amazon/B0iYXQPnu",
+        available: true
+    },
+    "can-dispenser-01": {
+        name: "Sorbus Soda Can Organizer for Fridge with Lid (2-Pack)",
+        description: "A space-saving, BPA-free clear bin that holds up to 12 standard cans of soda, seltzer, or beer. The stackable design with a secure flat lid maximizes vertical fridge space while keeping beverages neat and ready to grab.",
+        image: "/images/products/can-dispenser-01.jpg",
+        imageAlt: "Clear stackable soda can organizer dispenser for refrigerator with lid",
+        link: "https://link.amazon/B0dB8yVvF",
+        available: true
+    },
+    "freezer-bins-01": {
+        name: "3-Pack Large Deep Freezer Organizer Bins with Handles",
+        description: "Heavy-duty, anti-rust metal wire baskets designed specifically for deep chest freezers. The open frame allows for efficient air circulation and faster freezing, while the foldable handles make pulling out heavy loads of meat and frozen goods effortless.",
+        image: "/images/products/freezer-bins-01.jpg",
+        imageAlt: "Set of 3 black metal wire deep freezer organizer bins with handles",
+        link: "https://link.amazon/B0jgqBEzi",
+        available: true
+    },
+    "fridge-dividers-01": {
+        name: "12-Inch Visible Fridge Organizer Rack with Removable Dividers",
+        description: "A versatile, slide-out fridge rack featuring four removable dividers to customize compartments for frozen foods, leftovers, or deli meats. The easy-grip side handles allow you to pull the rack out like a drawer for instant access to deep shelves.",
+        image: "/images/products/fridge-dividers-01.jpg",
+        imageAlt: "Clear plastic slide-out fridge organizer rack with adjustable dividers",
+        link: "https://link.amazon/B0aoWq9hQ",
+        available: true
+    },
+    "fridge-labels-01": {
+        name: "1000 Removable Food Date Labels with Perforation Line (1\" x 2\")",
+        description: "A mega-roll of 1,000 water, oil, and tear-resistant blank stickers designed for food containers and freezer bags. The strong adhesive leaves no residue, making them perfect for tracking prep dates and expiration dates to reduce food waste.",
+        image: "/images/products/fridge-labels-01.jpg",
+        imageAlt: "Roll of 1000 blank white removable food date labels for pantry and fridge organization",
+        link: "https://link.amazon/B01JlcCP6",
         available: true
     }
 };
